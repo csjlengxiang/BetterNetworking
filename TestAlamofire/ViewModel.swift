@@ -28,10 +28,12 @@ class ViewModel: NSObject {
                 case .next(let value):
                     let json = JSON(data: value.data)
                     let jsonArray = json["data"]["data"]
-                    for (_, subJson):(String, JSON) in jsonArray {
-                        let model = Mapper<Model>().map(JSON: subJson.object as! [String : Any])!
-                        self.models.append(model)
-                    }
+//                    for (_, subJson):(String, JSON) in jsonArray {
+//                        let model = Mapper<Model>().map(JSON: subJson.object as! [String : Any])!
+//                        self.models.append(model)
+//                    }
+                    let array = jsonArray.arrayObject as! [[String: Any]]
+                    self.models = Mapper<Model>().mapArray(JSONArray: array)!
                     complete(self.models)
                 case .error(let error):
                     print(error)
