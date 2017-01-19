@@ -7,13 +7,18 @@
 //
 
 import UIKit
+import ObjectMapper
 
-class Model: NSObject {
-    let category: String
-    let name: String
+class Model: Mappable {
+    var category: String?
+    var name: String?
     
-    init(category: String, name: String) {
-        self.category = category
-        self.name = name
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        category    <- map["category"]
+        name        <- map["name"]
     }
 }
