@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import RxSwift
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
     let viewModel = ViewModel()
-    
+    let disposeBag = DisposeBag()
     var models: [Model]?
     
     override func viewDidLoad() {
@@ -21,10 +22,19 @@ class ViewController: UIViewController {
         
         self.tableView.dataSource = self
         
-        viewModel.getCatrgories { [unowned self] (models) in
-            self.models = models
-            self.tableView.reloadData()
-        }
+        viewModel.getCatrgories()
+            .subscribe({ [unowned self] event in
+                switch event {
+                case .next(let models):
+                    self.models = models
+                    self.tableView.reloadData()
+                case .error(let error):
+                    print(error)
+                case .completed:
+                    return
+                }
+            })
+            .addDisposableTo(disposeBag)
     }
 }
 

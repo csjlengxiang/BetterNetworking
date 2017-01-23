@@ -21,20 +21,9 @@ class ViewModel: NSObject {
     let disposeBag = DisposeBag()
     typealias Complete = ([Model]) -> Void
     
-    func getCatrgories(complete: @escaping Complete) {
-        NewsProvider.request(.category)
+    func getCatrgories() -> Observable<[Model]> {
+        return NewsProvider
+            .request(.category)
             .mapArray(Model.self)
-            .subscribe({ event in
-                switch event {
-                case .next(let models):
-                    complete(models)
-                case .error(let error):
-                    print(error)
-                case .completed:
-                    return
-                }
-            })
-            .addDisposableTo(disposeBag)
-        
     }
 }
