@@ -15,13 +15,7 @@ import Moya
 import ObjectMapper
 
 class ViewModel: NSObject {
-    let param = ["iid": iid]
-    let url = baseURL + articlePath
-    var models = [Model]()
-    let disposeBag = DisposeBag()
-    typealias Complete = ([Model]) -> Void
-    
-    func getCatrgories() -> Observable<[Model]> {
+    func getCategories() -> Observable<[Model]> {
         return NewsProvider
             .request(.category)
             .mapArray(Model.self)

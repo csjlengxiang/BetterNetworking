@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         
         self.tableView.dataSource = self
         
-        viewModel.getCatrgories()
+        viewModel.getCategories()
             .subscribe({ [unowned self] event in
                 switch event {
                 case .next(let models):
