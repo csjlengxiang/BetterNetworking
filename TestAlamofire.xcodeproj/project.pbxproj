@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		649158871EB3913F001B50C0 /* GetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649158861EB3913F001B50C0 /* GetType.swift */; };
 		7B53504E1DFEDC19008DDFE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B53504D1DFEDC19008DDFE9 /* AppDelegate.swift */; };
 		7B5350501DFEDC19008DDFE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B53504F1DFEDC19008DDFE9 /* ViewController.swift */; };
 		7B5350531DFEDC19008DDFE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B5350511DFEDC19008DDFE9 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		19A8AD5D1F0439795036BF32 /* Pods-TestAlamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAlamofire.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestAlamofire/Pods-TestAlamofire.release.xcconfig"; sourceTree = "<group>"; };
 		4DF787BFC1E7E632CEC3E4E8 /* Pods-TestAlamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAlamofire.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestAlamofire/Pods-TestAlamofire.debug.xcconfig"; sourceTree = "<group>"; };
+		649158861EB3913F001B50C0 /* GetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetType.swift; sourceTree = "<group>"; };
 		7B53504A1DFEDC19008DDFE9 /* TestAlamofire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAlamofire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B53504D1DFEDC19008DDFE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B53504F1DFEDC19008DDFE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				7B7EA8831DFEF36E00B6B946 /* Model.swift */,
 				7B7EA87C1DFEDEE400B6B946 /* Api.swift */,
 				7B54CC871E310E3100A569BB /* Observable+ObjectMapper.swift */,
+				649158861EB3913F001B50C0 /* GetType.swift */,
 				7B5350511DFEDC19008DDFE9 /* Main.storyboard */,
 				7B5350541DFEDC19008DDFE9 /* Assets.xcassets */,
 				7B5350561DFEDC19008DDFE9 /* LaunchScreen.storyboard */,
@@ -184,7 +187,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		33FDF7883B3B497E06A70EDB /* [CP] Embed Pods Frameworks */ = {
@@ -228,6 +231,7 @@
 				7B7EA8841DFEF36E00B6B946 /* Model.swift in Sources */,
 				7B7EA87D1DFEDEE400B6B946 /* Api.swift in Sources */,
 				7B5350501DFEDC19008DDFE9 /* ViewController.swift in Sources */,
+				649158871EB3913F001B50C0 /* GetType.swift in Sources */,
 				7B7EA87F1DFEE0BD00B6B946 /* ViewModel.swift in Sources */,
 				7B53504E1DFEDC19008DDFE9 /* AppDelegate.swift in Sources */,
 			);

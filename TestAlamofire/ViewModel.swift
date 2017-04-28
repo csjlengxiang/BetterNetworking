@@ -17,7 +17,7 @@ import ObjectMapper
 class ViewModel: NSObject {
     func getCategories() -> Observable<[Model]> {
         return NewsProvider
-            .request(.category)
+            .request(categoryApi())
             .mapArray(Model.self)
     }
 }

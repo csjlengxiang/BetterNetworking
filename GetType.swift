@@ -1,26 +1,21 @@
 //
-//  Api.swift
-//  TestAlamofire
+//  GetAble.swift
+//  
 //
-//  Created by 田腾飞 on 2016/12/12.
-//  Copyright © 2016年 田腾飞. All rights reserved.
+//  Created by csj on 2017/4/28.
+//
 //
 
-import UIKit
-import Moya
+import Foundation
 
-let baseURL = "https://iu.snssdk.com"
 
-/// 文章路径
-let articlePath = "/article/category/get_subscribed/v1/"
 
-/// iid
-let iid = 6253487170
+protocol GetAble: TargetType {
+    
+}
 
-let NewsProvider = RxMoyaProvider<categoryApi>()
-
-public enum NewsService {
-    case category
+extension TargetType {
+    
 }
 
 extension NewsService: TargetType {
@@ -70,4 +65,3 @@ extension NewsService: TargetType {
         }
     }
 }
-
